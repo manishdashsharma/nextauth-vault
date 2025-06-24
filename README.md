@@ -24,8 +24,8 @@ A modern authentication system built with Next.js 14, NextAuth.js, and Tailwind 
 
 1. **Clone and install dependencies:**
 ```bash
-git clone <your-repo>
-cd nextauth-app
+https://github.com/manishdashsharma/nextauth-vault.git
+cd nextauth-vault
 npm install
 ```
 
