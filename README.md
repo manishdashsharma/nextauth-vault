@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextAuth Authentication App
 
-## Getting Started
+A modern authentication system built with Next.js 14, NextAuth.js, and Tailwind CSS featuring GitHub and Google OAuth providers with a sleek dark theme and smooth animations.
 
-First, run the development server:
+## ✨ Features
 
+- 🔐 **Secure Authentication** - OAuth 2.0 with GitHub and Google
+- 🎨 **Modern Dark UI** - Beautiful glassmorphism design with Tailwind CSS
+- ⚡ **Smooth Animations** - Framer Motion powered interactions
+- 📱 **Responsive Design** - Works perfectly on all devices
+- 🛡️ **Session Management** - Secure session handling with NextAuth.js
+- 🎯 **User Dashboard** - Comprehensive user profile and session details
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- GitHub OAuth App
+- Google OAuth App
+
+### Installation
+
+1. **Clone and install dependencies:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo>
+cd nextauth-app
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install required packages:**
+```bash
+npm install next-auth framer-motion lucide-react
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. **Set up environment variables:**
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Configure OAuth providers:**
 
-## Learn More
+#### GitHub OAuth:
+- Go to [GitHub Settings](https://github.com/settings/developers) > OAuth Apps
+- Create new OAuth App
+- Set Authorization callback URL: `http://localhost:3000/api/auth/callback/github`
+- Copy Client ID and Client Secret to `.env.local`
 
-To learn more about Next.js, take a look at the following resources:
+#### Google OAuth:
+- Go to [Google Cloud Console](https://console.cloud.google.com/)
+- Create/select project > Credentials > OAuth 2.0 Client IDs
+- Set Authorized redirect URI: `http://localhost:3000/api/auth/callback/google`
+- Copy Client ID and Client Secret to `.env.local`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Run the development server:**
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit [http://localhost:3000](http://localhost:3000) to see your app!
 
-## Deploy on Vercel
+## 🎨 UI Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Sign In Page
+- Interactive GitHub and Google login buttons
+- Smooth hover animations and transitions
+- Security badges and feature highlights
+- Responsive design with mobile optimization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### User Dashboard
+- User profile with avatar display
+- Account details and session information
+- Provider identification (GitHub/Google)
+- Real-time session status
+- Secure logout functionality
+
+## 🔧 Environment Variables
+
+```env
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-secret-key-here
+AUTH_GITHUB_ID=your-github-client-id
+AUTH_GITHUB_SECRET=your-github-client-secret
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+```
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Authentication:** NextAuth.js v5
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Language:** TypeScript
+
+## 📝 Usage
+
+1. **Sign In:** Users can authenticate using GitHub or Google
+2. **Dashboard:** View user profile, account details, and session info
+3. **Sign Out:** Secure logout with redirect to sign-in page
+
+
+**Happy coding!** �
