@@ -60,6 +60,7 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000) to see your app!
 
+
 ## 🎨 UI Components
 
 ### Sign In Page
@@ -79,7 +80,7 @@ Visit [http://localhost:3000](http://localhost:3000) to see your app!
 
 ```env
 NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-secret-key-here
+AUTH_SECRET=your-secret-key-here
 AUTH_GITHUB_ID=your-github-client-id
 AUTH_GITHUB_SECRET=your-github-client-secret
 GOOGLE_CLIENT_ID=your-google-client-id
@@ -102,4 +103,4 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 3. **Sign Out:** Secure logout with redirect to sign-in page
 
 
-**Happy coding!** �
+**Happy coding!** 🎉
